@@ -1,0 +1,34 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#player {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%; /* full width */
+  height: 100%; /* full height */
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+#endImage {
+  position: fixed;
+  top: 0; /* top-left corner */
+  left: 0;
+  width: 100vw; /* full viewport width */
+  height: 100vh; /* full viewport height */
+  object-fit: cover; /* maintain aspect ratio, crop if necessary */
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 15s ease; /* slow fade over 15 seconds */
+}
